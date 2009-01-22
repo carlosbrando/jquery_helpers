@@ -10,7 +10,7 @@
 			});
 
 			$(this).blur(function() {
-				if ($.trim($(this).attr('value')) != '')
+				if ($.trim($(this).attr('value')) == '')
 					$(this).addClass('hint').attr('value', $(this).attr('_default'));
 			});
 
