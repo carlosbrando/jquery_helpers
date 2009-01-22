@@ -1,12 +1,6 @@
-== Prototype helpers
+== jQuery helpers
 
 Various bits and helpers, that might prove useful or not.
-
-To make the test pages work, first run 
-
-rake dist
-
-in lib/prototype (you'll need Ruby installed for this!).
 
 == License
 
