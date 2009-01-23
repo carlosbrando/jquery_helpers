@@ -1,17 +1,20 @@
 (function($){ 
 	$.fn.defaultValueActsAsHint = function() {
 		return this.each(function() {
-			$(this).attr('_default', $(this).attr('value'))
-			$(this).addClass('hint');
+			var self = $(this);
+			self.attr('_default', self.attr('value'))
+			self.addClass('hint');
 
-			$(this).bind('focus', function(event) {
-				if ($(this).attr('_default') == $(this).attr('value'))
-					$(this).removeClass('hint').attr('value', '');
+			self.bind('focus', function(event) {
+				var self = $(this);
+				if (self.attr('_default') == self.attr('value'))
+					self.removeClass('hint').attr('value', '');
 			});
 
-			$(this).blur(function() {
-				if ($.trim($(this).attr('value')) == '')
-					$(this).addClass('hint').attr('value', $(this).attr('_default'));
+			self.blur(function() {
+				var self = $(this);
+				if ($.trim(self.attr('value')) == '')
+					self.addClass('hint').attr('value', self.attr('_default'));
 			});
 
 		});
