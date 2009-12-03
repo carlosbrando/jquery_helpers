@@ -2,7 +2,7 @@
 	$.fn.defaultValueActsAsHint = function() {
 		return this.each(function() {
 			var self = $(this);
-			self.attr('_default', self.attr('value'))
+			self.attr('_default', self.attr('value'));
 			self.addClass('hint');
 
 			self.bind('focus', function(event) {
